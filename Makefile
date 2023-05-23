@@ -26,12 +26,12 @@ unit-test:
 unit-tests:
 	./bin/beandev.sh unit-tests
 
-.PHONY: feature-tests
-feature-tests:
+.PHONY: e2e-tests
+e2e-tests:
 	./test/bats/bin/bats test/
 
 .PHONY: tests
-tests: build feature-tests unit-tests
+tests: build e2e-tests unit-tests
 
 .PHONY: run-dev
 run-dev: dev
